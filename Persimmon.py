@@ -18,7 +18,8 @@ def restart():
     restart = 1
 
 while True:
-    import time, random
+    import time, random, subprocess
+    subprocess.run(["git", "pull"]) 
     print("""
     =======+++=======
         WELCOME TO
@@ -46,8 +47,8 @@ Good luck!""")
             continue
         elif what == "2":
             print("A bug has occured involving this module. It has been disabled for now.")
-#            with open("highscore.txt", "r+") as hisc:
-#                print("HIGHSCORE =",hisc.read())
+            with open("highscore.txt", "r+") as hisc:
+                print("HIGHSCORE =",hisc.read())
             time.sleep(6)
             continue
             
@@ -85,17 +86,17 @@ Good luck!""")
 
     highscore = 0
 
-    #with open("highscore.txt", "r+") as hisc:
-    #    hi = hisc.read()
-    #    if not hi:  
-    #        hi = '0'
-    #    if score > int(hi):
-    #        print("NEW HIGHSCORE!")
-    #        hisc.seek(0)  
-    #        hisc.write(str(score))
-    #    else:
-    #        print("HIGHSCORE =%s" % hi)
+    with open("highscore.txt", "r+") as hisc:
+        hi = hisc.read()
+        if not hi:  
+            hi = '0'
+        if score > int(hi):
+            print("NEW HIGHSCORE!")
+            hisc.seek(0)  
+            hisc.write(str(score))
+        else:
+            print("HIGHSCORE =%s" % hi)
 
-    #    time.sleep(3)
+        time.sleep(3)
         
 
