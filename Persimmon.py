@@ -45,9 +45,11 @@ Good luck!""")
             time.sleep(6)
             continue
         elif what == "2":
-            hisc = open("highscore.txt")
-            print("HIGHSCORE =",hisc.read())
-            time.sleep(5)
+            print("A bug has occured involving this module. It has been disabled for now.")
+#            with open("highscore.txt", "r+") as hisc:
+#                print("HIGHSCORE =",hisc.read())
+            time.sleep(6)
+            continue
             
         else:
             restart()
@@ -83,17 +85,17 @@ Good luck!""")
 
     highscore = 0
 
-with open("highscore.txt", "r+") as hisc:
-    hi = hisc.read()
-    if not hi:  
-        hi = '0'
-    if score > int(hi):
-        print("NEW HIGHSCORE!")
-        hisc.seek(0)  
-        hisc.write(str(score))
-    else:
-        print("HIGHSCORE =%s" % hi)
+    #with open("highscore.txt", "r+") as hisc:
+    #    hi = hisc.read()
+    #    if not hi:  
+    #        hi = '0'
+    #    if score > int(hi):
+    #        print("NEW HIGHSCORE!")
+    #        hisc.seek(0)  
+    #        hisc.write(str(score))
+    #    else:
+    #        print("HIGHSCORE =%s" % hi)
 
-    time.sleep(3)
+    #    time.sleep(3)
         
 
