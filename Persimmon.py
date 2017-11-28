@@ -18,8 +18,7 @@ def restart():
     restart = 1
 
 while True:
-    import time, random, subprocess
-    subprocess.run(["git", "pull"]) 
+    import time, random
     print("""
     =======+++=======
         WELCOME TO
