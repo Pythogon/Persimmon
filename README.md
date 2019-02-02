@@ -1,6 +1,8 @@
 # Persimmon
 Persimmon is a fun little python random number game. Play it today!  
-  
+    
+This is the Lite version of Persimmon. Please use the master branch if you want the full benefits of this program.    
+    
 [Setup](https://github.com/Pythogon/Persimmon/wiki/Setup "Setup")  
 RULES:  
 A number will be randomly selected each round.  
